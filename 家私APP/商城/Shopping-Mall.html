@@ -3,9 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>商城</title>
-	<link rel="stylesheet" type="text/css" href="./../base.css">
 	<link rel="stylesheet" type="text/css" href="./Shopping-Mall.css">
-	<script type="text/javascript" src="./../main.js"></script>
+	<link rel="stylesheet" type="text/css" href="./../base.css">
+	<link rel="stylesheet" type="text/css" href="./../basic/css/swiper.min.css">
+	<script src="./../jquery-3.2.1.min.js"></script>
+	<script src="./../basic/js/swiper-3.4.2.jquery.min.js"></script>
 </head>
 <body>
 	<div class="layout">
@@ -18,11 +20,63 @@
 				<input type="button" name="" class="search-button">
 			</div>
 			<div class="Mall-options">
-				
+				<ul class="Option">
+					<li>推荐</li>
+					<li>家饰</li>
+					<li>收纳</li>
+					<li>餐厨</li>
+					<li>家纺</li>
+				</ul>
+				<div class="Title-Underline"></div>
 			</div>
 		</div>
-		<div class="content"></div>
+		<div class="content">
+			<div class="Recommended-carousel">
+				<div class="swiper-container">
+				  <div class="swiper-wrapper">
+				    <div class="swiper-slide">
+						<img src="./../img/sxt/图层 0.png">
+				    </div>
+				    <div class="swiper-slide">
+						<img src="./../img/sxt/图层 0.png">
+					</div>
+				    <div class="swiper-slide">
+						<img src="./../img/sxt/图层 0.png">
+					</div>
+				  </div>
+   				  <div class="swiper-pagination"></div>
+				</div>
+				<ul>
+					<li><i></i>欧美质量标准</li>
+					<li><i></i>30无忧退货</li>
+					<li><i></i>24小时快速发货</li>
+				</ul>
+			</div>
+			<div class="Life-coach">
+				<p>欧美生活直通车</p>
+			</div>
+		</div>
 		<div class=""></div>
 	</div>
 </body>
+
+<script type="text/javascript">
+
+    getRem(750,100)
+    getRem(750,100)
+function getRem(pwidth,prem){
+    var html = document.getElementsByTagName("html")[0];
+    var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+    html.style.fontSize = oWidth/pwidth*prem + "px";
+}
+
+var mySwiper = new Swiper('.swiper-container', {
+	autoplay: 4000,//可选选项，自动滑动
+	autoplayDisableOnInteraction : true,
+	loop : true,
+    pagination: '.swiper-pagination',
+})
+
+</script>
+
 </html>
